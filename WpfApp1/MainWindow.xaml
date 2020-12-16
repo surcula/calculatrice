@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Calculatrice" Height="600" Width="900">
-    <Grid>        
+        Title="Calculatrice" MaxHeight="460" MaxWidth="820">
+    <Window.Resources>
+        
+    </Window.Resources>
+    <Grid Style="{StaticResource BackGroundBlack}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="200"/>
@@ -24,30 +27,27 @@
             <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <TextBox IsReadOnly="true" VerticalAlignment="bottom" FontSize="30" x:Name="Reponse" Grid.Row="0" Grid.ColumnSpan="4" TextAlignment="Right">0</TextBox>
-        <Button x:Name="B11" Grid.Row="1" Grid.Column="0" Content="MC" Background="#7a7e81" Foreground="#636363"></Button>
-        <Button x:Name="B12" Grid.Row="1" Grid.Column="1" Content="M+" Background="#7a7e81" Foreground="#636363"></Button>
-        <Button x:Name="B13" Grid.Row="1" Grid.Column="2" Content="M-" Background="#7a7e81" Foreground="#636363"></Button>
-        <Button x:Name="B14" Grid.Row="1" Grid.Column="3" Content="Mr" Background="#7a7e81" Foreground="#636363"></Button>
-        <Button x:Name="Bclean" Grid.Row="2" Grid.Column="0" Content="C" Click="BClear_Click" Background="#75645c" Foreground="#636363"> </Button>
-        <Button x:Name="Bplusoumoins" Grid.Row="2" Grid.Column="1" Content="+-" Click="Bsigne_Click" Background="#75645c" Foreground="#636363"></Button>
-        <Button x:Name="Bdivise" Grid.Row="2" Grid.Column="2" Content="/" Click="Boperator_Click" Background="#75645c" Foreground="#636363"></Button>
-        <Button x:Name="Bfois" Grid.Row="2" Grid.Column="3" Content="X" Click="Boperator_Click" Background="#75645c" Foreground="#636363"></Button>
-        <Button x:Name="Bmoins" Grid.Row="3" Grid.Column="3" Content="-" Click="Boperator_Click" Background="#75645c" Foreground="#636363"></Button>
-        <Button x:Name="B7" Grid.Row="3" Grid.Column="0" Content="7" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B8" Grid.Row="3" Grid.Column="1" Content="8" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B9" Grid.Row="3" Grid.Column="2" Content="9" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B4" Grid.Row="4" Grid.Column="0" Content="4" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B5" Grid.Row="4" Grid.Column="1" Content="5" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B6" Grid.Row="4" Grid.Column="2" Content="6" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B1" Grid.Row="5" Grid.Column="0" Content="1" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B2" Grid.Row="5" Grid.Column="1" Content="2" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B3" Grid.Row="5" Grid.Column="2" Content="3" Click="B1_Click" Foreground="#636363"  Background="#000000"></Button>
-        <Button x:Name="B0" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="B1_Click" Foreground="#636363" Background="#000000"></Button>
-        <Button x:Name="Bplus" Grid.Row="4" Grid.Column="3" Content="+" Click="Boperator_Click" Foreground="#636363" Background="#75645c"></Button>
-        <Button x:Name="Begal" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Content="=" Click="Resultat_Click" Background="#f36c1a" Foreground="#636363"></Button>
-        <Button x:Name="Bvirgule" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" Content="," Foreground="#636363"  Background="#000000" >       
-        </Button>
-        
-
+        <Button x:Name="B11" Grid.Row="1" Grid.Column="0" Content="MC" Style="{StaticResource btnMem}"></Button>
+        <Button x:Name="B12" Grid.Row="1" Grid.Column="1" Content="M+" Style="{StaticResource btnMem}"></Button>
+        <Button x:Name="B13" Grid.Row="1" Grid.Column="2" Content="M-" Style="{StaticResource btnMem}"></Button>
+        <Button x:Name="B14" Grid.Row="1" Grid.Column="3" Content="Mr" Style="{StaticResource btnMem}"></Button>
+        <Button x:Name="Bclean" Grid.Row="2" Grid.Column="0" Content="C" Click="BClear_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Bplusoumoins" Grid.Row="2" Grid.Column="1" Content="+-" Click="Bsigne_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Bdivise" Grid.Row="2" Grid.Column="2" Content="/" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Bfois" Grid.Row="2" Grid.Column="3" Content="X" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Bmoins" Grid.Row="3" Grid.Column="3" Content="-" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="B7" Grid.Row="3" Grid.Column="0" Content="7" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B8" Grid.Row="3" Grid.Column="1" Content="8" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B9" Grid.Row="3" Grid.Column="2" Content="9" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B4" Grid.Row="4" Grid.Column="0" Content="4" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B5" Grid.Row="4" Grid.Column="1" Content="5" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B6" Grid.Row="4" Grid.Column="2" Content="6" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B1" Grid.Row="5" Grid.Column="0" Content="1" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B2" Grid.Row="5" Grid.Column="1" Content="2" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B3" Grid.Row="5" Grid.Column="2" Content="3" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="B0" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
+        <Button x:Name="Bplus" Grid.Row="4" Grid.Column="3" Content="+" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Begal" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Content="=" Click="Resultat_Click" Style="{StaticResource btnCalcSigne}" ></Button>
+        <Button x:Name="Bvirgule" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" Content="," Style="{StaticResource btnNoir}" ></Button>
     </Grid>
 </Window>

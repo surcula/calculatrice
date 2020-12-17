@@ -71,7 +71,7 @@ namespace WpfApp1
                     resultat = (int.Parse(number1)) * (int.Parse(number2));
                     Reponse.Text = resultat.ToString();
                     break;
-                case "/":
+                case "%":
                     resultat = (int.Parse(number1)) / (int.Parse(number2));
                     Reponse.Text = resultat.ToString();
                     break;

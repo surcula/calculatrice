@@ -16,7 +16,6 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="60"/>
@@ -32,7 +31,7 @@
         <Button x:Name="B13" Grid.Row="1" Grid.Column="2" Content="M-" Style="{StaticResource btnMem}"></Button>
         <Button x:Name="B14" Grid.Row="1" Grid.Column="3" Content="Mr" Style="{StaticResource btnMem}"></Button>
         <Button x:Name="Bclean" Grid.Row="2" Grid.Column="0" Content="C" Click="BClear_Click" Style="{StaticResource btnCalcSigne}"></Button>
-        <Button x:Name="Bplusoumoins" Grid.Row="2" Grid.Column="1" Content="+-" Click="Bsigne_Click" Style="{StaticResource btnCalcSigne}"></Button>
+        <Button x:Name="Bplusoumoins" Grid.Row="2" Grid.Column="1" Content="&#x00B1;" Click="Bsigne_Click" Style="{StaticResource btnCalcSigne}"></Button>
         <Button x:Name="Bdivise" Grid.Row="2" Grid.Column="2" Content="/" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
         <Button x:Name="Bfois" Grid.Row="2" Grid.Column="3" Content="X" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
         <Button x:Name="Bmoins" Grid.Row="3" Grid.Column="3" Content="-" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
@@ -47,7 +46,7 @@
         <Button x:Name="B3" Grid.Row="5" Grid.Column="2" Content="3" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
         <Button x:Name="B0" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="B1_Click" Style="{StaticResource btnNoir}"></Button>
         <Button x:Name="Bplus" Grid.Row="4" Grid.Column="3" Content="+" Click="Boperator_Click" Style="{StaticResource btnCalcSigne}"></Button>
-        <Button x:Name="Begal" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Content="=" Click="Resultat_Click" Style="{StaticResource btnCalcSigne}" ></Button>
+        <Button x:Name="Begal" Grid.Row="5" Grid.Column="3" Grid.RowSpan="2" Content="=" Click="Resultat_Click" Style="{StaticResource btnCalcSigne}" Margin="5,5,10,10" ></Button>
         <Button x:Name="Bvirgule" Grid.Row="6" Grid.Column="2" Grid.RowSpan="2" Content="," Style="{StaticResource btnNoir}" ></Button>
     </Grid>
 </Window>
